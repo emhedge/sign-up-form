@@ -169,7 +169,8 @@ h2 {
 .wrapper {
     background-color: white;
     padding: 25px 0 50px 50px;
-    
+    /* border-bottom: 8px inset ; */
+    box-shadow: -3px 8px 8px rgb(199, 199, 199);
 }
 
 form {
