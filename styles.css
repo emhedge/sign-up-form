@@ -1,4 +1,10 @@
-
+:root {
+    --camel: #C9A378ff;
+    --pitch-black: #121406ff;
+    --charcoal: #575656ff;
+    --air-force-blue: #738F9Cff;
+    --charcoal-brown: #2E2B1Cff;
+}
 
 @font-face {
   font-family: "Macondo";
@@ -7,6 +13,14 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(./fonts/Roboto-VariableFont_wdth\,wght.woff2);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -28,7 +42,7 @@
 }
 
 body {
-    font-family: "Roboto Regular", sans-serif, system-ui;
+    font-family: "Roboto", sans-serif, system-ui;
     display: flex;
     flex-direction: row;
     max-width: 100%;
@@ -52,7 +66,7 @@ textarea {
 div#left {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 45%;
     height: 100vh;
     position: relative;
 }
@@ -76,17 +90,15 @@ div#right {
     display: flex;
     flex-direction: column;
     background-color: rgb(245, 245, 245);
-    width: 60%;    
+    width: 55%;    
 }
-
-
 
 #logo-banner {
     display:flex;
     flex-direction: row;
     position: absolute;
     z-index: 2;
-    margin-top: 40vh;
+    margin-top: 27.5vh;
     background-color: rgb(0, 0, 0, 0.6);
     width: 100%;
     height: 125px;
@@ -114,8 +126,7 @@ div#right {
     align-items: center;
     justify-content: left;
 
-    
-    font-family: "Macondo", "Roboto Regular", sans-serif, system-ui;
+    font-family: "Macondo", "Roboto", sans-serif, system-ui;
     font-size: 5em;
     color: white;
     z-index: 3;
@@ -135,7 +146,6 @@ div#right {
     flex: 1;
     align-items: center;
     justify-content: center;
-
     color: white;
 }
 
@@ -168,7 +178,7 @@ h2 {
 
 .wrapper {
     background-color: white;
-    padding: 25px 0 50px 50px;
+    padding: 25px 0 25px 50px;
     /* border-bottom: 8px inset ; */
     box-shadow: -3px 8px 8px rgb(199, 199, 199);
 }
@@ -178,6 +188,12 @@ form {
     position: relative;
     justify-content: left;
     box-sizing: border-box;
+}
+
+#required-note {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
 }
 
 .grid-container {
@@ -214,4 +230,41 @@ label {
     font-size: 0.8em;
     font-family:inherit;
     text-transform:uppercase;
+}
+
+#button {
+    padding: 60px 50px;    
+    font-size: 1.1em;
+}
+
+button {
+    min-width: fit-content;
+    padding: 15px 50px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--air-force-blue);
+    border: none;
+    border-radius: 5px;
+}
+
+#call-to-action {
+    padding: 0 50px;
+    
+}
+
+#call-to-action > p > a {
+    color: var(--air-force-blue);   
+    font-weight: bold;
+}
+
+input:focus {
+    outline: solid 1px var(--air-force-blue);
+}
+
+input:user-valid {
+    outline: solid 1px green;
+}
+
+input:user-invalid {
+    outline: solid 1px red;
 }
